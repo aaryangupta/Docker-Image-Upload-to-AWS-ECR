@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#! /usr/bin/bash
 
 VERSION=""
 
@@ -61,6 +61,6 @@ else
   echo "Already a tag on this commit"
 fi
 
-echo "{name}={value}" >> $NEW_TAG
+echo ::set-output name=git-tag::$NEW_TAG
 
 exit 0
