@@ -25,7 +25,7 @@ jobs:
     - name: Automatic Tagging of Releases
       id: increment-git-tag
       run: |
-        bash Docker-Image-Upload-to-AWS-ECR/build/git_update.sh -v minor
+        bash /Docker-Image-Upload-to-AWS-ECR/build/git_update.sh -v minor
 
     - name: Build, Tag, and Push the Image to Amazon ECR
       id: build-image
