@@ -6,7 +6,7 @@ COPY go.mod ./
 COPY go.sum ./
 COPY *.go ./
 
-#RUN go mod tidy
+RUN go mod tidy
 
 
 RUN go build -o /Docker-Image-Upload-to-AWS-ECR
