@@ -9,14 +9,14 @@ COPY *.go ./
 #RUN go mod tidy
 
 
-RUN go build -o /DockerImageUploadtoAWSECR
+RUN go build -o /Docker-Image-Upload-to-AWS-ECR
 
 FROM gcr.io/distroless/base-debian10
 
 WORKDIR /
 
-COPY --from=build /DockerImageUploadtoAWSECR /DockerImageUploadtoAWSECR
+COPY --from=build /Docker-Image-Upload-to-AWS-ECR /Docker-Image-Upload-to-AWS-ECR
 
 USER nonroot:nonroot
 
-ENTRYPOINT ["/DockerImageUploadtoAWSECR"]
+ENTRYPOINT ["/Docker-Image-Upload-to-AWS-ECR"]
